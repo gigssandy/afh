@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="google-site-verification" content="i808vUr367K9fDegK5OqdvqHRDTR7heab6440ry1Dyg" />
     <title>Amazing Mehndi Designs - Simple Patterns You'll Love</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -21,34 +20,40 @@
             background-color: #fff9f9;
         }
         
-        .navbar-brand {
-            font-weight: 700;
-            color: var(--primary-color) !important;
+        .custom-img-placeholder {
+            background: linear-gradient(45deg, #f3e5f5, #e1bee7, #ce93d8);
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-color);
+            font-weight: bold;
+            text-align: center;
+            padding: 20px;
         }
         
         .hero-section {
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1596704017256-17930792d2f0');
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                        var(--primary-color);
             background-size: cover;
-            background-position: center;
             color: white;
             padding: 120px 0;
             margin-bottom: 50px;
-        }
-        
-        .section-title {
             position: relative;
-            margin-bottom: 40px;
-            color: var(--primary-color);
+            overflow: hidden;
         }
         
-        .section-title:after {
+        .hero-section::before {
             content: "";
             position: absolute;
-            bottom: -10px;
+            top: 0;
             left: 0;
-            width: 60px;
-            height: 3px;
-            background: var(--secondary-color);
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 30%, rgba(233, 30, 99, 0.8) 0%, transparent 40%),
+                radial-gradient(circle at 80% 70%, rgba(103, 58, 183, 0.8) 0%, transparent 40%);
+            z-index: -1;
         }
         
         .design-card {
@@ -64,39 +69,13 @@
             transform: translateY(-10px);
         }
         
-        .design-card img {
-            height: 250px;
-            object-fit: cover;
-        }
-        
-        .btn-primary {
-            background-color: var(--primary-color);
-            border-color: var(--primary-color);
-        }
-        
-        .testimonial-card {
-            background-color: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-        }
-        
-        footer {
-            background-color: var(--dark-color);
+        .video-placeholder {
+            background: linear-gradient(45deg, #d1c4e9, #b39ddb, #9575cd);
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             color: white;
-            padding: 50px 0 20px;
-        }
-        
-        .social-icon {
-            color: white;
-            font-size: 24px;
-            margin-right: 15px;
-        }
-        
-        @media (max-width: 768px) {
-            .hero-section {
-                padding: 80px 0;
-            }
         }
     </style>
     <!-- Google Fonts -->
@@ -108,7 +87,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
         <div class="container">
-            <a class="navbar-brand" href="#">Amazing Mehndi</a>
+            <a class="navbar-brand fw-bold" href="#">Amazing Mehndi</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -136,21 +115,26 @@
 
     <!-- Hero Section -->
     <section class="hero-section text-center">
-        <div class="container">
+        <div class="container position-relative">
             <h1 class="display-4 fw-bold mb-4">Beautiful Mehndi Designs for Every Occasion</h1>
             <p class="lead mb-5">Discover simple yet stunning henna patterns that anyone can try at home</p>
-            <a href="#designs" class="btn btn-primary btn-lg px-4">Explore Designs</a>
+            <a href="#designs" class="btn btn-light btn-lg px-4">Explore Designs</a>
         </div>
     </section>
 
     <!-- Featured Designs Section -->
     <section id="designs" class="py-5">
         <div class="container">
-            <h2 class="section-title">Featured Mehndi Designs</h2>
+            <h2 class="text-center mb-5 fw-bold" style="color: var(--primary-color);">Featured Mehndi Designs</h2>
             <div class="row">
                 <div class="col-md-4">
-                    <div class="card design-card">
-                        <img src="https://images.unsplash.com/photo-1596704017256-17930792d2f0" class="card-img-top" alt="Simple Floral Mehndi Design">
+                    <div class="card design-card h-100">
+                        <div class="custom-img-placeholder">
+                            <div>
+                                <i class="fas fa-hands-praying fa-3x mb-3"></i>
+                                <p>Simple Floral Mehndi Design</p>
+                            </div>
+                        </div>
                         <div class="card-body">
                             <h5 class="card-title">Simple Floral Pattern</h5>
                             <p class="card-text">Perfect for beginners and casual occasions. Takes only 15-20 minutes to apply.</p>
@@ -159,8 +143,13 @@
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="card design-card">
-                        <img src="https://images.unsplash.com/photo-1585208232151-481b2c1dd623" class="card-img-top" alt="Bridal Mehndi Design">
+                    <div class="card design-card h-100">
+                        <div class="custom-img-placeholder">
+                            <div>
+                                <i class="fas fa-feather-alt fa-3x mb-3"></i>
+                                <p>Bridal Peacock Mehndi Design</p>
+                            </div>
+                        </div>
                         <div class="card-body">
                             <h5 class="card-title">Bridal Special</h5>
                             <p class="card-text">Intricate patterns with peacock motifs for the perfect wedding look.</p>
@@ -169,8 +158,13 @@
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="card design-card">
-                        <img src="https://images.unsplash.com/photo-1560851212-ae5d42ef0a01" class="card-img-top" alt="Festive Mehndi Design">
+                    <div class="card design-card h-100">
+                        <div class="custom-img-placeholder">
+                            <div>
+                                <i class="fas fa-moon fa-3x mb-3"></i>
+                                <p>Festive Arabic Mehndi Design</p>
+                            </div>
+                        </div>
                         <div class="card-body">
                             <h5 class="card-title">Festive Collection</h5>
                             <p class="card-text">Celebrate Eid, Diwali and other festivals with these beautiful designs.</p>
@@ -185,16 +179,26 @@
     <!-- Tutorials Section -->
     <section id="tutorials" class="py-5 bg-light">
         <div class="container">
-            <h2 class="section-title">Step-by-Step Tutorials</h2>
+            <h2 class="text-center mb-5 fw-bold" style="color: var(--primary-color);">Step-by-Step Tutorials</h2>
             <div class="row">
                 <div class="col-lg-6 mb-4">
                     <div class="ratio ratio-16x9">
-                        <iframe src="https://www.youtube.com/embed/example1" title="Mehndi Tutorial" allowfullscreen></iframe>
+                        <div class="video-placeholder">
+                            <div>
+                                <i class="fas fa-play-circle fa-4x mb-3"></i>
+                                <p>Simple Front Hand Mehndi Tutorial</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="col-lg-6 mb-4">
                     <div class="ratio ratio-16x9">
-                        <iframe src="https://www.youtube.com/embed/example2" title="Mehndi Tutorial" allowfullscreen></iframe>
+                        <div class="video-placeholder">
+                            <div>
+                                <i class="fas fa-play-circle fa-4x mb-3"></i>
+                                <p>Bridal Mehndi Design Process</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -209,60 +213,17 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 mb-4 mb-lg-0">
-                    <h2 class="section-title">About Amazing Mehndi</h2>
+                    <h2 class="mb-4 fw-bold" style="color: var(--primary-color);">About Amazing Mehndi</h2>
                     <p>Welcome to Amazing Mehndi, your ultimate destination for beautiful and simple henna designs. I'm [Your Name], a passionate mehndi artist with [X] years of experience in creating stunning patterns for all occasions.</p>
                     <p>My mission is to make mehndi art accessible to everyone, from complete beginners to experienced artists. Whether you're preparing for a wedding, festival, or just want to adorn your hands with beautiful designs, you'll find inspiration here.</p>
                     <p>Explore my collection of <a href="https://amazingfactshindi.com/simple-designs-for-mehndi-youll-love/">simple mehndi designs you'll love</a> and start your henna journey today!</p>
                 </div>
                 <div class="col-lg-6">
-                    <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348" alt="Mehndi Artist at Work" class="img-fluid rounded shadow">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section class="py-5 bg-light">
-        <div class="container">
-            <h2 class="section-title text-center">What Our Visitors Say</h2>
-            <div class="row">
-                <div class="col-md-4 mb-4">
-                    <div class="testimonial-card">
-                        <div class="mb-3">
-                            <i class="fas fa-star text-warning"></i>
-                            <i class="fas fa-star text-warning"></i>
-                            <i class="fas fa-star text-warning"></i>
-                            <i class="fas fa-star text-warning"></i>
-                            <i class="fas fa-star text-warning"></i>
+                    <div class="custom-img-placeholder" style="height: 400px;">
+                        <div>
+                            <i class="fas fa-paint-brush fa-4x mb-3"></i>
+                            <p>Mehndi Artist at Work</p>
                         </div>
-                        <p class="mb-4">"The simple designs tutorial helped me create beautiful mehndi for my sister's wedding. Thank you!"</p>
-                        <h5>- Priya M.</h5>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="testimonial-card">
-                        <div class="mb-3">
-                            <i class="fas fa-star text-warning"></i>
-                            <i class="fas fa-star text-warning"></i>
-                            <i class="fas fa-star text-warning"></i>
-                            <i class="fas fa-star text-warning"></i>
-                            <i class="fas fa-star text-warning"></i>
-                        </div>
-                        <p class="mb-4">"As a beginner, I found the step-by-step guides extremely helpful. My Eid mehndi turned out perfect!"</p>
-                        <h5>- Aisha K.</h5>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="testimonial-card">
-                        <div class="mb-3">
-                            <i class="fas fa-star text-warning"></i>
-                            <i class="fas fa-star text-warning"></i>
-                            <i class="fas fa-star text-warning"></i>
-                            <i class="fas fa-star text-warning"></i>
-                            <i class="fas fa-star-half-alt text-warning"></i>
-                        </div>
-                        <p class="mb-4">"The bridal designs section gave me so many ideas for my wedding. Highly recommended!"</p>
-                        <h5>- Neha S.</h5>
                     </div>
                 </div>
             </div>
@@ -270,33 +231,49 @@
     </section>
 
     <!-- Gallery Section -->
-    <section class="py-5">
+    <section class="py-5 bg-light">
         <div class="container">
-            <h2 class="section-title text-center">Mehndi Gallery</h2>
+            <h2 class="text-center mb-5 fw-bold" style="color: var(--primary-color);">Mehndi Gallery</h2>
             <div class="row g-3">
                 <div class="col-6 col-md-3">
-                    <img src="https://images.unsplash.com/photo-1596704017256-17930792d2f0" alt="Mehndi Design 1" class="img-fluid rounded shadow-sm">
+                    <div class="custom-img-placeholder" style="height: 150px;">
+                        <i class="fas fa-leaf fa-2x"></i>
+                    </div>
                 </div>
                 <div class="col-6 col-md-3">
-                    <img src="https://images.unsplash.com/photo-1585208232151-481b2c1dd623" alt="Mehndi Design 2" class="img-fluid rounded shadow-sm">
+                    <div class="custom-img-placeholder" style="height: 150px;">
+                        <i class="fas fa-feather fa-2x"></i>
+                    </div>
                 </div>
                 <div class="col-6 col-md-3">
-                    <img src="https://images.unsplash.com/photo-1560851212-ae5d42ef0a01" alt="Mehndi Design 3" class="img-fluid rounded shadow-sm">
+                    <div class="custom-img-placeholder" style="height: 150px;">
+                        <i class="fas fa-heart fa-2x"></i>
+                    </div>
                 </div>
                 <div class="col-6 col-md-3">
-                    <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348" alt="Mehndi Design 4" class="img-fluid rounded shadow-sm">
+                    <div class="custom-img-placeholder" style="height: 150px;">
+                        <i class="fas fa-star fa-2x"></i>
+                    </div>
                 </div>
                 <div class="col-6 col-md-3">
-                    <img src="https://images.unsplash.com/photo-1596704017256-17930792d2f0" alt="Mehndi Design 5" class="img-fluid rounded shadow-sm">
+                    <div class="custom-img-placeholder" style="height: 150px;">
+                        <i class="fas fa-sun fa-2x"></i>
+                    </div>
                 </div>
                 <div class="col-6 col-md-3">
-                    <img src="https://images.unsplash.com/photo-1585208232151-481b2c1dd623" alt="Mehndi Design 6" class="img-fluid rounded shadow-sm">
+                    <div class="custom-img-placeholder" style="height: 150px;">
+                        <i class="fas fa-moon fa-2x"></i>
+                    </div>
                 </div>
                 <div class="col-6 col-md-3">
-                    <img src="https://images.unsplash.com/photo-1560851212-ae5d42ef0a01" alt="Mehndi Design 7" class="img-fluid rounded shadow-sm">
+                    <div class="custom-img-placeholder" style="height: 150px;">
+                        <i class="fas fa-spa fa-2x"></i>
+                    </div>
                 </div>
                 <div class="col-6 col-md-3">
-                    <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348" alt="Mehndi Design 8" class="img-fluid rounded shadow-sm">
+                    <div class="custom-img-placeholder" style="height: 150px;">
+                        <i class="fas fa-infinity fa-2x"></i>
+                    </div>
                 </div>
             </div>
             <div class="text-center mt-4">
@@ -305,127 +282,52 @@
         </div>
     </section>
 
-
-
-  <!-- Contact Section -->
-<section id="contact" class="py-5 bg-light">
-    <div class="container">
-        <h2 class="section-title text-center">Connect With Us</h2>
-        <div class="row">
-            <div class="col-lg-6 mb-4">
-                <h3 class="h4 mb-4">Send a Message</h3>
-                <form>
-                    <div class="row g-3">
-                        <div class="col-md-6">
-                            <label for="name" class="form-label">Your Name</label>
-                            <input type="text" class="form-control" id="name" required>
-                        </div>
-                        <div class="col-md-6">
-                            <label for="email" class="form-label">Email Address</label>
-                            <input type="email" class="form-control" id="email" required>
-                        </div>
-                        <div class="col-12">
-                            <label for="subject" class="form-label">Subject</label>
-                            <input type="text" class="form-control" id="subject" required>
-                        </div>
-                        <div class="col-12">
-                            <label for="message" class="form-label">Message</label>
-                            <textarea class="form-control" id="message" rows="5" required></textarea>
-                        </div>
-                        <div class="col-12">
-                            <button type="submit" class="btn btn-primary px-4">Send Message</button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-            
-            <div class="col-lg-6">
-                <h3 class="h4 mb-4">Explore More Resources</h3>
-                <div class="row row-cols-2 g-3">
-                    <!-- Column 1 -->
-                    <div class="col">
-                        <div class="card h-100 border-0 shadow-sm">
-                            <div class="card-body">
-                                <h5 class="card-title h6">Mehndi Design Portfolios</h5>
-                                <ul class="list-unstyled small">
-                                    <li class="mb-2"><a href="https://dulhamehndidesigns.mystrikingly.com/" target="_blank">Dulha Mehndi Designs</a></li>
-                                    <li class="mb-2"><a href="https://groommehndidesign.mystrikingly.com/" target="_blank">Groom Mehndi Designs</a></li>
-                                    <li class="mb-2"><a href="https://sites.google.com/view/amazing-facts-hindi/mehndi-design-blog" target="_blank">Amazing Facts Hindi</a></li>
-                                </ul>
+    <!-- Contact Section -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5 fw-bold" style="color: var(--primary-color);">Get In Touch</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <form>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label for="name" class="form-label">Your Name</label>
+                                <input type="text" class="form-control" id="name" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="email" class="form-label">Email Address</label>
+                                <input type="email" class="form-control" id="email" required>
+                            </div>
+                            <div class="col-12">
+                                <label for="subject" class="form-label">Subject</label>
+                                <input type="text" class="form-control" id="subject" required>
+                            </div>
+                            <div class="col-12">
+                                <label for="message" class="form-label">Message</label>
+                                <textarea class="form-control" id="message" rows="5" required></textarea>
+                            </div>
+                            <div class="col-12 text-center">
+                                <button type="submit" class="btn btn-primary px-4">Send Message</button>
                             </div>
                         </div>
-                    </div>
-                    
-                    <!-- Column 2 -->
-                    <div class="col">
-                        <div class="card h-100 border-0 shadow-sm">
-                            <div class="card-body">
-                                <h5 class="card-title h6">Trend Reports</h5>
-                                <ul class="list-unstyled small">
-                                    <li class="mb-2"><a href="https://sandyjoyce.medium.com/dulha-mehndi-design-guide-2025-trends-styles-and-tips-for-grooms-d708efd1aa23" target="_blank">2025 Groom Trends</a></li>
-                                    <li class="mb-2"><a href="https://www.bloglovin.com/@afh1/ultimate-guide-to-dulha-mehndi-design" target="_blank">Ultimate Groom Guide</a></li>
-                                    <li class="mb-2"><a href="https://sandyjoyce.medium.com/top-bridal-mehndi-trends-for-2025-f42450aba465" target="_blank">2025 Bridal Trends</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Column 3 -->
-                    <div class="col">
-                        <div class="card h-100 border-0 shadow-sm">
-                            <div class="card-body">
-                                <h5 class="card-title h6">Design Collections</h5>
-                                <ul class="list-unstyled small">
-                                    <li class="mb-2"><a href="https://cold-river-83a.notion.site/Top-130-Dulha-Mehndi-Design-Photos-Latest-2025-218431b8c9f880fea122fe88f4e2a36d" target="_blank">130+ Dulha Designs</a></li>
-                                    <li class="mb-2"><a href="https://speakerdeck.com/afh9099/top-130-plus-dulha-mehndi-design-photos-latest-2025" target="_blank">Dulha Slides</a></li>
-                                    <li class="mb-2"><a href="https://cold-river-83a.notion.site/Trending-Groom-Mehndi-Designs-for-2025-219431b8c9f88016b6a2d2cbc4048d55" target="_blank">Trending Groom Designs</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Column 4 -->
-                    <div class="col">
-                        <div class="card h-100 border-0 shadow-sm">
-                            <div class="card-body">
-                                <h5 class="card-title h6">More Platforms</h5>
-                                <ul class="list-unstyled small">
-                                    <li class="mb-2"><a href="https://linktr.ee/mehndidesignblousedesign" target="_blank">All Links Hub</a></li>
-                                    <li class="mb-2"><a href="https://www.diigo.com/user/superearth2021" target="_blank">Diigo Bookmarks</a></li>
-                                    <li class="mb-2"><a href="https://zumvu.com/afhfacts/links" target="_blank">Zumvu Links</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="mt-4 text-center">
-                    <h5 class="h6 mb-3">Quick Access Links</h5>
-                    <div class="d-flex flex-wrap justify-content-center gap-2">
-                        <a href="https://cutt.ly/erW0wq3b" class="btn btn-sm btn-outline-primary">Short Links</a>
-                        <a href="https://d6united.mn.co/posts/86407214" class="btn btn-sm btn-outline-primary">MNCO Posts</a>
-                        <a href="https://ameblo.jp/afhfacts/entry-12911744447.html" class="btn btn-sm btn-outline-primary">Ameblo</a>
-                        <a href="https://justpaste.me/dulhamehndidesign" class="btn btn-sm btn-outline-primary">JustPaste</a>
-                        <a href="https://telegra.ph/Trending-Bridal-Mehndi-Designs-for-2025-You-Cant-Miss-06-24" class="btn btn-sm btn-outline-primary">Telegraph</a>
-                    </div>
+                    </form>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
     <!-- Footer -->
-    <footer class="py-5">
+    <footer class="py-5 text-white" style="background-color: var(--dark-color);">
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 mb-4 mb-lg-0">
                     <h5 class="mb-4">Amazing Mehndi</h5>
                     <p>Your destination for beautiful and simple henna designs for all occasions.</p>
                     <div class="mt-4">
-                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="social-icon"><i class="fab fa-pinterest-p"></i></a>
-                        <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-pinterest-p"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
